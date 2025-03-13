@@ -1,0 +1,66 @@
+﻿{
+  "env": {
+    "browser": true,
+    "commonjs": true
+  },
+  "globals": {
+    "THREE": true,
+    "Shaders": true,
+    "DataLoader": true,
+    "dat": true,
+    "Detector" : true,
+    "Grid": true,
+    "Step": true,
+    "Plotter" : true,
+    "Uint32Array" : true,
+    "Float32Array" : true,
+    "AxisHelper" : true,
+    "PlottedMesh" : true,
+    "Box" : true,
+    "SlicingPlane" : true,
+    "SpriteText" : true,
+    "GridTestingSetUp" : true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": [ "eslint:recommended" ],
+  "rules": {
+    "semi": 1,
+    "no-mixed-spaces-and-tabs": [ 2, "smart-tabs" ],
+    "no-console": [
+      2,
+      { "allow": [ "info", "warn", "table", "count" ] }
+    ],
+    "brace-style": [
+      2,
+      "stroustrup",
+      { "allowSingleLine": true }
+    ],
+    "keyword-spacing": [
+      2,
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "eqeqeq": [ 2, "smart" ],
+    "no-unused-vars": [
+      1,
+      {
+        "vars": "local",
+        "args": "none"
+      }
+    ],
+    "quote-props": [ 1, "consistent-as-needed" ],
+    "space-infix-ops": 2,
+    "block-spacing": 1,
+    "comma-spacing": 1,
+    "func-call-spacing": ["error", "never"],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "space-before-function-paren": ["error", "never"],
+    "space-before-blocks": "error",
+    "space-in-parens": ["error", "never"],
+    "no-multiple-empty-lines": ["error", "max": 1]
+  }
+}

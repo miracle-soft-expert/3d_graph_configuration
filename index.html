@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+  <head>
+
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+
+    <link rel="stylesheet" href="style.css">
+    <script src="external/three85.min.js"></script>
+    <script src="libs/dat.gui.js"></script>
+    <script src="libs/OrbitControls.js"></script>
+    <script src="libs/DragControls.js"></script>
+    <script src="libs/Detector.js"></script>
+    <script src="libs/stats.min.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    
+    <script src="external/postprocessing/EffectComposer.js"></script>
+    <script src="external/postprocessing/RenderPass.js"></script>
+    <script src="external/postprocessing/MaskPass.js"></script>
+    <script src="external/postprocessing/ShaderPass.js"></script>
+    <script src="external/shaders/CopyShader.js"></script>
+    <script src="external/shaders/FXAAShader.js"></script>
+
+    <script type="text/javascript" src="items/GridTesting.js"></script>
+  </head>
+
+  <body style="background: #ff765f;">
+    <div id="loader_spinner" style="
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgb(107, 121, 107);
+    ">
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+        <div class="meter">
+            <span id="meter" style="width: 0%;"></span>
+        </div>
+    </div>
+  <div id="things"  style="
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0px;
+            left: 0px;
+            background-color: #ffc7ad;
+            position: absolute;
+        " >
+	   <div id="plotter-container" style="
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+      " ></div>
+      <div id="axis_container" style="
+            width: 25vh;
+            height: 25vh;
+            display: block;
+            position: relative;
+            z-index: 1;
+      " ></div>
+      <div id="top_view_container" style="
+            width: 25vh;
+            height: 25vh;
+            display: block;
+            position: relative;
+            z-index: 1;
+      " ></div>
+      <div id="color_map_container" style="
+            width: 25vh;
+            height: 25vh;
+            display: block;
+            position: relative;
+            z-index: 1;
+      " ></div>
+      <div id="grid_container" style="
+            width: 25vh;
+            height: 25vh;
+            display: block;
+            position: relative;
+            z-index: 1;
+      " ></div>
+    </div>
+
+    <div id="config_area">
+        <section>
+            <label><input type="checkbox" id="chk_show_step">Show Step Plane</label>
+        </section>
+        <section>
+            <label>Step Plane Transparency:</label>
+            <input type="number" id="num_transparent" value="1.0" step="0.1" min="0" max="1">
+            <input type="button" value="Update" id="btn_update">
+        </section>
+        <ul>
+            <li>
+                <section><label>Start Point :</label></section>
+                <section><label>End Point :</label></section>
+            </li>
+            <li>
+                <section><input type="number" id="spos_x" class="min-input"></section>
+                <section><input type="number" id="epos_x" class="min-input"></section>
+            </li>
+            <li>
+                <section><input type="number" id="spos_z" class="min-input"></section>
+                <section><input type="number" id="epos_z" class="min-input"></section>
+            </li>
+            <li>
+                <input type="button" value="Update" id="btn_update_point">
+            </li>
+        </ul>
+        <section>
+            <center>
+                <h3>Position from events fired by 3D view:</h3>
+                <input type="text" id="info_pos" readonly="readonly">
+            </center>
+        </section>
+    </div>
+    
+    <script src="items/Box.js"></script>
+    <script src="items/PlottedMesh.js"></script>
+    <script src="items/Shaders.js"></script>
+    <script src="items/Text.js"></script>
+    <script src="items/SpriteText.js"></script>
+    <script src="items/Grid.js"></script>
+    <script src="items/SlicingPlane.js"></script>
+    <script src="items/AxisHelper.js"></script>
+    <script src="items/step.js"></script>
+    <script src="libs/plotter-script.js"></script>
+    <script src="libs/plotter-loader.js"></script>
+
+  </body>
+
+</html>
